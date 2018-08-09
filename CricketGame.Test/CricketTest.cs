@@ -44,6 +44,13 @@ namespace CricketGame.Test
             Assert.IsTrue(game.ShowWinner(0));
         }
 
+	[TestMethod]
+        public void CheckingTie()
+        {
+            var game = new CheckWinner();
+            Assert.IsFalse(game.IsTie());
+        }
+
         [TestMethod]
         public void Score_Validruns_ShouldUpdateBothPlayerScore()
         {
